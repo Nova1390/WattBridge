@@ -1,13 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Mail, ShieldCheck } from "lucide-react";
 import { AppShell } from "@/components/app-shell";
+import { createAuthCallbackUrl } from "@/lib/supabase/auth";
 import { createBrowserSupabaseClient, isSupabaseConfigured } from "@/lib/supabase/client";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const client = createBrowserSupabaseClient();
+    if (!client) return;
+
+    async function redirectIfLoggedIn() {
+      const supabase = client;
+      if (!supabase) return;
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        router.replace("/dashboard");
+      }
+    }
+
+    void redirectIfLoggedIn();
+  }, [router]);
 
   async function sendMagicLink(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -20,7 +39,7 @@ export default function LoginPage() {
     const { error } = await client.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`
+        emailRedirectTo: createAuthCallbackUrl(window.location.origin, "/dashboard")
       }
     });
 

@@ -85,3 +85,10 @@ Secrets backup must be decided separately before real deployment.
 - Preview environment variables are configured for the public Supabase URL and anon key.
 - Manual Preview deployment builds successfully.
 - Direct anonymous HTTP smoke checks against Preview return Vercel SSO `401` while Preview deployment protection is enabled.
+
+## Auth Flow
+
+- Magic-link requests redirect to `/auth/callback?next=/dashboard`.
+- The callback exchanges the Supabase `code` for a browser session and then redirects to the internal `next` path.
+- Supabase Auth redirect allowlist includes local and production callback URLs.
+- If login appears to stay on the login page, verify that the clicked email link points at `/auth/callback`, not directly at `/dashboard`.

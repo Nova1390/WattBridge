@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { calculateSurplus, normalizeEnergySample } from "@/lib/core/energy";
 import { mockDryer } from "@/lib/core/mock-data";
 import { canRecommendDryerRun, createApprovalRequest, createDryerRecommendation, isApprovalExpired } from "@/lib/core/rules";
+import { createAuthCallbackUrl, normalizeInternalRedirect } from "@/lib/supabase/auth";
 
 describe("energy calculations", () => {
   it("uses positive grid export as surplus", () => {
@@ -67,5 +68,20 @@ describe("manual approval rules", () => {
     const approval = createApprovalRequest(recommendation, now);
 
     expect(isApprovalExpired(approval, new Date("2026-05-27T10:20:00.000Z"))).toBe(true);
+  });
+});
+
+describe("auth redirect helpers", () => {
+  it("creates a Supabase magic-link callback URL", () => {
+    expect(createAuthCallbackUrl("https://wattbridge.vercel.app")).toBe(
+      "https://wattbridge.vercel.app/auth/callback?next=%2Fdashboard"
+    );
+  });
+
+  it("allows only internal post-login redirects", () => {
+    expect(normalizeInternalRedirect("/integrations")).toBe("/integrations");
+    expect(normalizeInternalRedirect("https://example.com")).toBe("/dashboard");
+    expect(normalizeInternalRedirect("//example.com")).toBe("/dashboard");
+    expect(normalizeInternalRedirect(null)).toBe("/dashboard");
   });
 });

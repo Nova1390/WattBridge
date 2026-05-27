@@ -69,6 +69,7 @@ Exit criteria:
 
 Goals:
 
+- Validate production magic-link login through `/auth/callback`.
 - Verify the initial migration from a clean database.
 - Add or document controlled demo seed behavior.
 - Test RLS for unauthenticated and authenticated access.
