@@ -128,8 +128,9 @@ Current findings:
 - Import/export telemetry is available but has a different interval array shape and must be normalized separately.
 - The committed fixture redacts household energy values, identifiers, serial numbers, tokens, keys, and authorization values.
 - The Watt plan call budget is low; Enphase Cloud must be used parsimoniously with explicit call budgets, scheduled refreshes, current-state caching, and stale/degraded UI instead of dashboard-driven polling.
-- Fixture-based Enphase adapter tests now cover payload shape, 15-minute telemetry cadence, nested import/export intervals, and Watt plan API-budget policy without making network calls.
-- Next real-data step: implement a read-only Enphase adapter around the tested normalization helpers, with scheduled/explicit refresh only and stale/degraded state.
+- Read-only Enphase adapter groundwork exists: `refreshCurrentState` allows manual/scheduled refreshes, rejects dashboard-triggered refresh, normalizes recent telemetry into vendor-neutral state, and exposes stale/degraded health.
+- Fixture-based Enphase adapter tests cover payload shape, 15-minute telemetry cadence, nested import/export intervals, dashboard-trigger rejection, stale state behavior, and Watt plan API-budget policy without making network calls.
+- Next real-data step: wire the read-only adapter to a scheduled or explicit sync path that writes current state to Supabase, without letting the dashboard call Enphase directly.
 
 ### Block 4: SmartThings Read-Only Discovery
 

@@ -145,10 +145,11 @@ Official references checked:
 
 ## Fixture-Based Adapter Tests
 
-- `lib/adapters/enphase.ts` currently contains offline helpers for summarizing sanitized Enphase discovery fixtures.
-- `tests/enphase-adapter.test.ts` verifies device counts, telemetry interval shape, 15-minute cadence, import/export nested interval normalization, and the Watt plan API budget policy.
+- `lib/adapters/enphase.ts` contains offline helpers for summarizing sanitized Enphase discovery fixtures and a read-only Enphase Cloud adapter.
+- The adapter exposes `refreshCurrentState(trigger)` for `manual` and `scheduled` refreshes, rejects `dashboard` refreshes, caches the latest normalized state, and returns stale/degraded health when the cache is old or partial.
+- `tests/enphase-adapter.test.ts` verifies device counts, telemetry interval shape, 15-minute cadence, import/export nested interval normalization, dashboard-trigger rejection, stale state behavior, and the Watt plan API budget policy.
 - These tests intentionally use redacted fixture values; they validate payload shape and adapter assumptions without storing household energy profiles.
-- Real Enphase adapter network calls should be added only after the budget-aware contract is stable.
+- The adapter is not wired to the dashboard. A scheduler, edge connector, or explicit operator action must call refresh and then persist state to Supabase.
 
 ## Risks
 

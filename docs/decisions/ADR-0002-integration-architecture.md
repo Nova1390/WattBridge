@@ -12,6 +12,8 @@ Hardcoding vendor concepts into the core would make future integrations harder a
 
 Enphase discovery showed that adapter contracts also need to expose operational constraints, not only data shape. The Watt plan has a low API call budget, so cloud adapters must surface budget and staleness constraints before real polling is enabled.
 
+The first Enphase adapter implementation follows this rule: `readCurrentState` serves cached state, while `refreshCurrentState` is explicit and rejects dashboard-triggered refreshes.
+
 ## Options Considered
 
 1. Build Enphase and SmartThings directly into the core.
@@ -44,4 +46,5 @@ Negative:
 - Define normalized capabilities for energy readings, device state, and safe commands.
 - Add contract tests before implementing real adapters.
 - Keep Enphase network reads behind scheduled or explicit refresh paths, not dashboard rendering.
+- Preserve this separation for future cloud adapters with tight API limits.
 - Revisit plugin loading only after at least three integrations exist.

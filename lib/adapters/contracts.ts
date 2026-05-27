@@ -16,12 +16,22 @@ export type AdapterApiBudget = {
   dashboard_polling_allowed: boolean;
 };
 
+export type AdapterRefreshTrigger = "manual" | "scheduled" | "dashboard";
+
+export type AdapterRefreshResult<TState> = {
+  state: TState;
+  refreshed_at: string;
+  api_calls_used: number;
+  stale_after_seconds: number;
+};
+
 export type EnergySourceAdapter = {
   id: string;
   kind: "solar" | "battery" | "grid";
   displayName: string;
   getHealth(): Promise<AdapterHealth>;
   readCurrentState(): Promise<EnergyState>;
+  refreshCurrentState?(trigger: AdapterRefreshTrigger): Promise<AdapterRefreshResult<EnergyState>>;
 };
 
 export type DeviceAdapter = {
