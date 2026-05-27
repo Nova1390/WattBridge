@@ -81,7 +81,8 @@ button {
   gap: 6px;
 }
 
-.nav a {
+.nav a,
+.nav button {
   min-height: 42px;
   display: flex;
   align-items: center;
@@ -89,10 +90,15 @@ button {
   padding: 0 10px;
   border-radius: 8px;
   color: rgba(248, 245, 236, 0.76);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
 }
 
 .nav a:hover,
-.nav a:focus-visible {
+.nav a:focus-visible,
+.nav button:hover,
+.nav button:focus-visible {
   background: rgba(248, 245, 236, 0.1);
   color: #fff;
   outline: none;
