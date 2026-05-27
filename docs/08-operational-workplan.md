@@ -128,7 +128,8 @@ Current findings:
 - Import/export telemetry is available but has a different interval array shape and must be normalized separately.
 - The committed fixture redacts household energy values, identifiers, serial numbers, tokens, keys, and authorization values.
 - The Watt plan call budget is low; Enphase Cloud must be used parsimoniously with explicit call budgets, scheduled refreshes, current-state caching, and stale/degraded UI instead of dashboard-driven polling.
-- Next real-data step: update ADR-0003 storage assumptions and prepare Enphase fixture-based adapter normalization tests.
+- Fixture-based Enphase adapter tests now cover payload shape, 15-minute telemetry cadence, nested import/export intervals, and Watt plan API-budget policy without making network calls.
+- Next real-data step: implement a read-only Enphase adapter around the tested normalization helpers, with scheduled/explicit refresh only and stale/degraded state.
 
 ### Block 4: SmartThings Read-Only Discovery
 

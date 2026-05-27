@@ -143,6 +143,13 @@ Official references checked:
 - Mark sample quality when data is stale, partial, estimated, or unavailable.
 - Avoid leaking Enphase-specific fields into the core model.
 
+## Fixture-Based Adapter Tests
+
+- `lib/adapters/enphase.ts` currently contains offline helpers for summarizing sanitized Enphase discovery fixtures.
+- `tests/enphase-adapter.test.ts` verifies device counts, telemetry interval shape, 15-minute cadence, import/export nested interval normalization, and the Watt plan API budget policy.
+- These tests intentionally use redacted fixture values; they validate payload shape and adapter assumptions without storing household energy profiles.
+- Real Enphase adapter network calls should be added only after the budget-aware contract is stable.
+
 ## Risks
 
 - Local API authentication may vary by firmware or account state.
