@@ -54,14 +54,14 @@ Goals:
 
 - Align operations docs with Vercel plus Supabase as the current deployed foundation.
 - Verify production dashboard HTTP status.
-- Document Vercel GitHub connection blocker if it cannot be resolved immediately.
+- Verify Vercel GitHub connection and Preview environment variables.
 - Keep real device commands disabled.
 
 Exit criteria:
 
 - Operations docs describe the real deployment.
 - Vercel production dashboard returns HTTP 200.
-- Vercel/GitHub and preview-env status are documented.
+- Vercel/GitHub and Preview env status are documented.
 - Brain project note reflects current blockers and next actions.
 
 ### Block 2: Supabase Readiness

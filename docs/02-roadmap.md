@@ -11,8 +11,9 @@ Current foundation status:
 - Vercel production dashboard is deployed at `https://wattbridge.vercel.app`.
 - Supabase project `gckonxhwhrgfufkbceuc` exists and has the initial control-plane migration applied.
 - Real device commands are not implemented.
-- Vercel GitHub connection is blocked by a repository access error and needs dashboard-side authorization or repair.
-- Preview environment variables are pending until Vercel GitHub connection is fixed.
+- Vercel GitHub connection is active for `Nova1390/WattBridge`.
+- Preview environment variables are configured.
+- Manual Preview deployment succeeds; anonymous HTTP smoke receives Vercel SSO `401` because Preview deployment protection is enabled.
 
 ## Phase 0: Discovery And Validation
 

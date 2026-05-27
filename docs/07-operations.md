@@ -75,7 +75,12 @@ Secrets backup must be decided separately before real deployment.
 
 ## External Setup Blockers
 
-- Vercel GitHub connection is not yet confirmed. A CLI attempt to connect `Nova1390/WattBridge` failed with a repository access error even though GitHub CLI can read the repository. The likely fix is to authorize or refresh the Vercel GitHub integration for the repository from the Vercel dashboard.
-- Preview environment variables are not configured yet. Configure them after the Vercel GitHub connection works.
 - Production login requires a real user session and must be manually validated in the browser.
 - `npm audit --omit=dev` reports a moderate PostCSS advisory through the current Next.js dependency. The proposed forced fix would downgrade Next to an old breaking version, so this should be tracked and revisited through a safe Next.js update rather than force-applied.
+
+## Vercel Git And Preview Status
+
+- GitHub repository `Nova1390/WattBridge` is connected to the Vercel project.
+- Preview environment variables are configured for the public Supabase URL and anon key.
+- Manual Preview deployment builds successfully.
+- Direct anonymous HTTP smoke checks against Preview return Vercel SSO `401` while Preview deployment protection is enabled.

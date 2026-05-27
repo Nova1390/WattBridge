@@ -191,9 +191,10 @@ Impact: Preview deployments and Preview environment variables may not be automat
 
 Mitigation:
 
-- Authorize or refresh the Vercel GitHub integration for `Nova1390/WattBridge` from the Vercel dashboard.
-- Keep production deploys available through the Vercel CLI while the GitHub connection is blocked.
-- Document Preview environment variable setup after the GitHub connection is repaired.
+- Completed: Vercel is now connected to `Nova1390/WattBridge`.
+- Completed: Preview environment variables are configured for Supabase public client settings.
+- Keep production deploys available through the Vercel CLI as an operational fallback.
+- Treat Preview anonymous smoke checks as protected if Vercel SSO returns `401`.
 
 ## Dependency Advisory Handling
 
