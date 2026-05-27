@@ -67,7 +67,7 @@ Exit criteria:
 
 ### Block 2: Supabase Readiness
 
-Status: in progress.
+Status: in progress; clean local migration reset is blocked until Docker/Supabase local is available.
 
 Goals:
 
@@ -92,7 +92,9 @@ Current findings:
 - `npm run check:supabase-readiness` verifies anonymous RLS behavior and anonymous audit update/delete blocking using the public anon key.
 - Remote readiness check passed: all protected anon reads returned no rows, and anon audit update/delete touched no rows.
 - Remote schema check confirms RLS is enabled on all 9 public control-plane tables.
-- Authenticated cross-user isolation still needs a dedicated test user harness before multi-user behavior is supported.
+- Authenticated RLS SQL harness passes: own demo site visible, other simulated user hidden, authenticated audit insert allowed, authenticated audit update/delete blocked.
+- Demo duplicates from pre-stable seed clicks have been cleaned; stable demo rows remain.
+- Clean local migration reset is currently blocked because Docker/Supabase local is unavailable.
 
 ### Block 3: Enphase Read-Only Discovery
 

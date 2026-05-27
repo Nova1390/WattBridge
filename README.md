@@ -75,6 +75,7 @@ npm test
 npm run typecheck
 npm run build
 npm run check:supabase-readiness
+supabase db query --linked -f scripts/supabase-authenticated-rls.sql
 ```
 
 Create `.env.local` from `.env.example` when the Supabase project is ready.

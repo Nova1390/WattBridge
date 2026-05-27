@@ -74,14 +74,18 @@ Secrets backup must be decided separately before real vendor integrations. Vendo
 Repeatable checks:
 
 - `npm run check:supabase-readiness` verifies anonymous RLS behavior and anonymous audit update/delete blocking with the public anon key.
+- `supabase db query --linked -f scripts/supabase-authenticated-rls.sql` verifies authenticated own-data visibility, cross-user hiding, authenticated audit insert, and authenticated audit update/delete blocking.
 - `supabase db query --linked` can verify that RLS is enabled on all public control-plane tables.
+- `supabase db query --linked -f scripts/supabase-clean-demo-state.sql` cleans pre-stable demo recommendation, approval, and audit duplicates while preserving stable demo rows.
 
 Current findings:
 
 - RLS is enabled on all 9 public control-plane tables.
 - Anonymous reads return no protected rows.
 - Anonymous attempts to update/delete `audit_events` update/delete no rows.
-- Authenticated cross-user isolation still needs a dedicated test-user harness before multi-user behavior is supported.
+- Authenticated RLS harness passes for simulated users.
+- Demo duplicates from pre-stable seed clicks have been cleaned.
+- Clean local migration reset is blocked until Docker/Supabase local is available on this machine.
 
 ## Operational Runbook Draft
 

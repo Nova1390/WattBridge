@@ -63,6 +63,7 @@ Run these before adding real integrations:
 
 ```bash
 npm run check:supabase-readiness
+supabase db query --linked -f scripts/supabase-authenticated-rls.sql
 ```
 
 The script uses only the public Supabase anon key. It verifies that anonymous reads return no protected rows and that anonymous update/delete attempts against `audit_events` do not modify data. Authenticated cross-user isolation still needs a dedicated test user harness before multi-user behavior is supported.
@@ -72,3 +73,4 @@ Current remote result:
 - Anonymous protected-table reads return no rows.
 - Anonymous `audit_events` update/delete attempts affect no rows.
 - RLS is enabled on all 9 public control-plane tables.
+- Authenticated RLS SQL harness passes: own demo site is visible, another simulated `auth.uid()` cannot see it, authenticated audit insert is allowed, and authenticated audit update/delete are blocked.
