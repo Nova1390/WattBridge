@@ -50,7 +50,9 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 
 - Vercel production URL: https://wattbridge.vercel.app
 - Current mode: mock-safe dashboard, no real device commands.
-- Supabase: migration and client boundary are in the repo; remote project creation still requires Supabase CLI authentication.
+- Supabase project: `gckonxhwhrgfufkbceuc`
+- Supabase URL: `https://gckonxhwhrgfufkbceuc.supabase.co`
+- Supabase status: initial control-plane migration applied; Auth redirect URLs configured for local dev and Vercel.
 
 ## Local Development
 
