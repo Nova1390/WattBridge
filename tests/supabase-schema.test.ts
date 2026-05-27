@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { demoIds } from "@/lib/supabase/demo-repository";
 
 const migration = readFileSync(
   join(process.cwd(), "supabase/migrations/20260527120000_initial_control_plane.sql"),
@@ -37,5 +38,15 @@ describe("Supabase migration guardrails", () => {
     const ownershipChecks = migration.match(/user_id = auth\.uid\(\)/g) ?? [];
 
     expect(ownershipChecks.length).toBeGreaterThanOrEqual(8);
+  });
+});
+
+describe("Supabase demo seed guardrails", () => {
+  it("uses stable ids for repeatable demo seeding", () => {
+    expect(demoIds.site).toBe("00000000-0000-4000-8000-000000000001");
+    expect(demoIds.recommendation).toBe("demo_recommendation_dryer_surplus");
+    expect(demoIds.approval).toBe("demo_approval_dryer_surplus");
+    expect(demoIds.auditRecommendationCreated).toBe("00000000-0000-4000-8000-000000000201");
+    expect(demoIds.auditApprovalCreated).toBe("00000000-0000-4000-8000-000000000202");
   });
 });

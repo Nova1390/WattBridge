@@ -91,5 +91,6 @@ Secrets backup must be decided separately before real deployment.
 - Magic-link requests redirect to `/auth/callback?next=/dashboard`.
 - The callback exchanges the Supabase `code` for a browser session and then redirects to the internal `next` path.
 - The sidebar navigation shows `Login` for anonymous visitors and `Logout` for authenticated sessions.
+- Production login and demo seeding have been manually validated; dashboard reaches `Supabase live`.
 - Supabase Auth redirect allowlist includes local and production callback URLs.
 - If login appears to stay on the login page, verify that the clicked email link points at `/auth/callback`, not directly at `/dashboard`.

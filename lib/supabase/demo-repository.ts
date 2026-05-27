@@ -2,20 +2,26 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { mockAuditEvents, mockDryer, mockEnergyState, mockRecommendation } from "@/lib/core/mock-data";
 import { createApprovalRequest } from "@/lib/core/rules";
 
-export async function seedDemoState(client: SupabaseClient, userId: string) {
-  const siteId = "00000000-0000-4000-8000-000000000001";
-  const smartThingsIntegrationId = "00000000-0000-4000-8000-000000000101";
+export const demoIds = {
+  site: "00000000-0000-4000-8000-000000000001",
+  smartThingsIntegration: "00000000-0000-4000-8000-000000000101",
+  recommendation: "demo_recommendation_dryer_surplus",
+  approval: "demo_approval_dryer_surplus",
+  auditRecommendationCreated: "00000000-0000-4000-8000-000000000201",
+  auditApprovalCreated: "00000000-0000-4000-8000-000000000202"
+};
 
+export async function seedDemoState(client: SupabaseClient, userId: string) {
   await client.from("sites").upsert({
-    id: siteId,
+    id: demoIds.site,
     user_id: userId,
     name: "Casa",
     timezone: "Europe/Rome"
   });
 
   await client.from("integrations").upsert({
-    id: smartThingsIntegrationId,
-    site_id: siteId,
+    id: demoIds.smartThingsIntegration,
+    site_id: demoIds.site,
     user_id: userId,
     type: "appliance",
     display_name: "SmartThings Mock",
@@ -25,15 +31,15 @@ export async function seedDemoState(client: SupabaseClient, userId: string) {
   });
 
   await client.from("energy_current_state").upsert({
-    site_id: siteId,
+    site_id: demoIds.site,
     user_id: userId,
     ...mockEnergyState
   });
 
   await client.from("devices").upsert({
     id: mockDryer.id,
-    integration_id: smartThingsIntegrationId,
-    site_id: siteId,
+    integration_id: demoIds.smartThingsIntegration,
+    site_id: demoIds.site,
     user_id: userId,
     external_id: "mock_dryer",
     display_name: mockDryer.display_name,
@@ -45,7 +51,7 @@ export async function seedDemoState(client: SupabaseClient, userId: string) {
 
   await client.from("device_current_state").upsert({
     device_id: mockDryer.id,
-    site_id: siteId,
+    site_id: demoIds.site,
     user_id: userId,
     operating_state: mockDryer.operating_state,
     power_w: mockDryer.power_w,
@@ -55,24 +61,31 @@ export async function seedDemoState(client: SupabaseClient, userId: string) {
   });
 
   if (mockRecommendation) {
+    const recommendation = {
+      ...mockRecommendation,
+      id: demoIds.recommendation
+    };
     await client.from("recommendations").upsert({
-      id: mockRecommendation.id,
-      site_id: siteId,
+      id: recommendation.id,
+      site_id: demoIds.site,
       user_id: userId,
       device_id: mockDryer.id,
-      created_at: mockRecommendation.created_at,
-      expires_at: mockRecommendation.expires_at,
-      title: mockRecommendation.title,
-      reason: mockRecommendation.reason,
-      recommended_action: mockRecommendation.recommended_action,
-      surplus_w: mockRecommendation.surplus_w,
-      status: mockRecommendation.status
+      created_at: recommendation.created_at,
+      expires_at: recommendation.expires_at,
+      title: recommendation.title,
+      reason: recommendation.reason,
+      recommended_action: recommendation.recommended_action,
+      surplus_w: recommendation.surplus_w,
+      status: recommendation.status
     });
 
-    const approval = createApprovalRequest(mockRecommendation);
+    const approval = {
+      ...createApprovalRequest(recommendation),
+      id: demoIds.approval
+    };
     await client.from("approval_requests").upsert({
       id: approval.id,
-      site_id: siteId,
+      site_id: demoIds.site,
       user_id: userId,
       recommendation_id: approval.recommendation_id,
       device_id: approval.device_id,
@@ -84,14 +97,16 @@ export async function seedDemoState(client: SupabaseClient, userId: string) {
     });
   }
 
-  await client.from("audit_events").insert(
-    mockAuditEvents.map((event) => ({
-      site_id: siteId,
+  await client.from("audit_events").upsert(
+    mockAuditEvents.map((event, index) => ({
+      id: index === 0 ? demoIds.auditRecommendationCreated : demoIds.auditApprovalCreated,
+      site_id: demoIds.site,
       user_id: userId,
       event_type: event.event_type,
       actor: event.actor,
       summary: event.summary,
       metadata: event.metadata ?? {}
-    }))
+    })),
+    { ignoreDuplicates: true }
   );
 }

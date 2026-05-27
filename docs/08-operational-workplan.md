@@ -48,7 +48,7 @@ Before committing Brain:
 
 ### Block 1: Foundation Alignment
 
-Status: in progress.
+Status: complete.
 
 Goals:
 
@@ -67,6 +67,8 @@ Exit criteria:
 
 ### Block 2: Supabase Readiness
 
+Status: in progress.
+
 Goals:
 
 - Validate production magic-link login through `/auth/callback`.
@@ -81,6 +83,12 @@ Exit criteria:
 - Migration and RLS checks are repeatable.
 - Audit write/read behavior is documented and tested.
 - ADR-0003 has enough evidence to move toward `Accepted` or list blockers.
+
+Current findings:
+
+- Production login works and dashboard reaches `Supabase live`.
+- Demo seed writes current state rows to Supabase.
+- Demo recommendation, approval, and audit seed IDs must remain stable so repeated clicks do not create noisy duplicates.
 
 ### Block 3: Enphase Read-Only Discovery
 

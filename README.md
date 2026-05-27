@@ -63,7 +63,7 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 - Preview environment variables are configured for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 - A manual Preview deployment builds successfully; direct anonymous HTTP smoke returns Vercel SSO `401` because Preview deployment protection is enabled.
 - Production magic-link login uses `/auth/callback` to exchange Supabase codes into browser sessions, then redirects to `/dashboard`.
-- Demo seeding still needs manual browser validation with a real user session after login.
+- Production login and demo seeding were manually validated; dashboard reaches `Supabase live`.
 - `npm audit --omit=dev` currently reports a moderate PostCSS advisory through Next.js; the suggested forced fix downgrades Next and should not be applied blindly.
 
 ## Local Development
