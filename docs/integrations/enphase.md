@@ -68,6 +68,27 @@ Plan implications:
 - Kilowatt and Megawatt plans increase limits and add device-level monitoring/streaming, but are paid.
 - Live Status is documented as supported for IQ Gateway version 6.0.0 or newer and may have separate per-hit pricing on paid plans.
 
+Authentication requirements:
+
+- Monitoring APIs use OAuth 2.0 authorization-code flow for developer applications.
+- Each API call must include both `Authorization: Bearer <access_token>` and the application API key.
+- The official quickstart shows the API key passed as the `key` request parameter; the documentation page also describes it as a key named `key`.
+- Access tokens are documented as valid for 1 day and refresh tokens for 1 month on Watt, Kilowatt, and Megawatt plans.
+- WattBridge discovery scripts require `ENPHASE_ACCESS_TOKEN` and `ENPHASE_API_KEY` locally; these values must never be committed, added to Vercel client env, or stored in Brain.
+
+Current discovery status:
+
+- Cloud script is prepared for read-only calls but has not been run against a real account in this repo session.
+- Local environment currently lacks `ENPHASE_ACCESS_TOKEN`, `ENPHASE_API_KEY`, and `ENPHASE_SYSTEM_ID`.
+- First real cloud run should start with `/systems`, then use the returned or configured `system_id` for summary, devices, latest telemetry, and import/export capability checks.
+
+Official references checked:
+
+- Enphase API v4 documentation: `https://developer-v4.enphase.com/docs.html`
+- Enphase API v4 quickstart: `https://developer-v4.enphase.com/docs/quickstart.html`
+- Enphase developer plans: `https://developer-v4.enphase.com/developer-plans`
+- Enphase API release notes: `https://developer-v4.enphase.com/docs/release_notes`
+
 ## WattBridge Implications
 
 - Enphase Cloud API is likely enough for historical dashboard views and source-refreshed history, within range and rate limits.

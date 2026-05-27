@@ -98,6 +98,8 @@ Current findings:
 
 ### Block 3: Enphase Read-Only Discovery
 
+Status: in progress.
+
 Goals:
 
 - Run Enphase cloud discovery with local-only credentials.
@@ -110,6 +112,13 @@ Exit criteria:
 - Enphase capability matrix is documented.
 - Sanitized fixtures exist.
 - Storage strategy is updated if discovery changes assumptions.
+
+Current findings:
+
+- Official Enphase API v4 docs confirm that Monitoring APIs use OAuth 2.0 and require both a bearer access token and application API key on API requests.
+- Local discovery cannot run yet because `ENPHASE_ACCESS_TOKEN`, `ENPHASE_API_KEY`, and `ENPHASE_SYSTEM_ID` are not present in the local environment.
+- Cloud discovery script now validates both token and API key before sending read-only requests.
+- Next real-data step: obtain local-only Enphase developer credentials, run `/systems`, select the target `system_id`, then capture sanitized summary/devices/latest telemetry fixtures.
 
 ### Block 4: SmartThings Read-Only Discovery
 

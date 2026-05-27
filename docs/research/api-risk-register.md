@@ -35,6 +35,8 @@ Mitigation:
 - Avoid hardcoding auth assumptions.
 - Keep auth flow isolated in the adapter.
 - Add mocked tests for auth failure behavior.
+- Track that API v4 currently requires both OAuth bearer access token and application API key; a token/key from mismatched applications can fail authorization.
+- Keep access-token refresh handling out of the browser and out of Vercel public environment variables.
 
 ## Enphase Cloud Rate Limits And Plan Gating
 

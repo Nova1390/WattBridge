@@ -2,14 +2,21 @@ import { writeSanitizedJson } from "./shared/sanitize";
 
 const baseUrl = "https://api.enphaseenergy.com/api/v4";
 const token = process.env.ENPHASE_ACCESS_TOKEN;
+const apiKey = process.env.ENPHASE_API_KEY;
 const systemId = process.env.ENPHASE_SYSTEM_ID;
 
 async function getJson(path: string) {
   if (!token) {
     throw new Error("Missing ENPHASE_ACCESS_TOKEN. This read-only script does not run without an explicit token.");
   }
+  if (!apiKey) {
+    throw new Error("Missing ENPHASE_API_KEY. Enphase API v4 requires the application API key with every request.");
+  }
 
-  const response = await fetch(`${baseUrl}${path}`, {
+  const url = new URL(`${baseUrl}${path}`);
+  url.searchParams.set("key", apiKey);
+
+  const response = await fetch(url, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/json"
