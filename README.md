@@ -59,7 +59,7 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 
 - Vercel production dashboard responds successfully at `/dashboard`.
 - Supabase linked project query confirms the expected public tables exist remotely.
-- Vercel GitHub connection is now active for `Nova1390/WattBridge`.
+- Vercel GitHub connection is now active for `Nova1390/WattBridge`; pushes to `main` trigger Production deployments.
 - Preview environment variables are configured for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 - A manual Preview deployment builds successfully; direct anonymous HTTP smoke returns Vercel SSO `401` because Preview deployment protection is enabled.
 - Production login and demo seeding need manual browser validation with a real user session.

@@ -81,6 +81,7 @@ Secrets backup must be decided separately before real deployment.
 ## Vercel Git And Preview Status
 
 - GitHub repository `Nova1390/WattBridge` is connected to the Vercel project.
+- Pushes to `main` trigger Production deployments.
 - Preview environment variables are configured for the public Supabase URL and anon key.
 - Manual Preview deployment builds successfully.
 - Direct anonymous HTTP smoke checks against Preview return Vercel SSO `401` while Preview deployment protection is enabled.

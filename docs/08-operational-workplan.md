@@ -61,6 +61,7 @@ Exit criteria:
 
 - Operations docs describe the real deployment.
 - Vercel production dashboard returns HTTP 200.
+- Pushes to `main` trigger Production deployments.
 - Vercel/GitHub and Preview env status are documented.
 - Brain project note reflects current blockers and next actions.
 
