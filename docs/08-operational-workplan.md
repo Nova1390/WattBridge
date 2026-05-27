@@ -117,10 +117,14 @@ Current findings:
 
 - Official Enphase API v4 docs confirm that Monitoring APIs use OAuth 2.0 and require both a bearer access token and application API key on API requests.
 - Enphase developer application is Live on the Watt plan with System Details, Site Level Production Monitoring, Site Level Consumption Monitoring, and EV Charger Monitoring access.
-- Local discovery cannot run yet because OAuth authorization-code exchange has not been completed and `ENPHASE_SYSTEM_ID` has not been selected from `/systems`.
+- OAuth authorization-code exchange succeeded locally. Access and refresh tokens are stored only in ignored `.env.local`.
 - Cloud discovery script validates both token and API key before sending read-only requests.
 - OAuth helper script can exchange an authorization code and update ignored `.env.local` without printing returned tokens.
-- Next real-data step: approve the Enphase Authorization URL, exchange the temporary code, run `/systems`, select the target `system_id`, then capture sanitized summary/devices/latest telemetry fixtures.
+- Initial read-only discovery succeeded and saved sanitized fixture `fixtures/discovery/enphase-cloud.json`.
+- Successful checks: `/systems`, `/summary`, `/devices`, and `/latest_telemetry`.
+- Target account exposes one system, 12 microinverters, 2 meters, 1 gateway, and 1 Q Relay.
+- Summary/current telemetry is available; explicit production/consumption/import/export historical telemetry checks are still pending.
+- Next real-data step: extend the discovery script to call production meter, consumption meter, energy import, and energy export telemetry endpoints over a small recent window.
 
 ### Block 4: SmartThings Read-Only Discovery
 

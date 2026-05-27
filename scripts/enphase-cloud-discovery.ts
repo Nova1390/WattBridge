@@ -5,6 +5,10 @@ const token = process.env.ENPHASE_ACCESS_TOKEN;
 const apiKey = process.env.ENPHASE_API_KEY;
 const systemId = process.env.ENPHASE_SYSTEM_ID;
 
+function fixturePath(path: string) {
+  return path.replace(/\/systems\/[^/]+/g, "/systems/[REDACTED]");
+}
+
 async function getJson(path: string) {
   if (!token) {
     throw new Error("Missing ENPHASE_ACCESS_TOKEN. This read-only script does not run without an explicit token.");
@@ -24,7 +28,7 @@ async function getJson(path: string) {
   });
 
   const body = await response.json().catch(() => ({ status: response.status, text: "Non-JSON response" }));
-  return { status: response.status, path, body };
+  return { status: response.status, path: fixturePath(path), body };
 }
 
 async function main() {

@@ -1,0 +1,338 @@
+{
+  "captured_at": "2026-05-27T13:51:23.484Z",
+  "note": "Read-only Enphase Cloud discovery. Secrets redacted.",
+  "results": [
+    {
+      "status": 200,
+      "path": "/systems",
+      "body": {
+        "total": 1,
+        "current_page": 1,
+        "size": 10,
+        "count": 1,
+        "items": "systems",
+        "systems": [
+          {
+            "system_id": "[REDACTED]",
+            "name": "[REDACTED]",
+            "public_name": "[REDACTED]",
+            "timezone": "Europe/Rome",
+            "address": "[REDACTED]",
+            "connection_type": "wifi",
+            "status": "normal",
+            "last_report_at": 1779889864,
+            "last_energy_at": 1779889636,
+            "operational_at": 1665093600,
+            "attachment_type": null,
+            "interconnect_date": null,
+            "energy_lifetime": -1,
+            "energy_today": -1,
+            "system_size": -1,
+            "other_references": [
+              "New Elettrik"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/summary",
+      "body": {
+        "modules": 12,
+        "nmi": null,
+        "source": "meter",
+        "status": "normal",
+        "system_id": "[REDACTED]",
+        "current_power": 3771,
+        "energy_lifetime": 16000319,
+        "energy_today": 17209,
+        "last_interval_end_at": 1779889636,
+        "last_report_at": 1779889864,
+        "operational_at": 1665093600,
+        "size_w": 5235,
+        "summary_date": "2026-05-27",
+        "battery_charge_w": 0,
+        "battery_discharge_w": 0,
+        "battery_capacity_wh": 0
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/devices",
+      "body": {
+        "items": "devices",
+        "devices": {
+          "micros": [
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889393,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889395,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889514,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889456,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889515,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889605,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889454,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889636,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889575,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889363,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889575,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ7A",
+              "sku": "IQ7A-72-E-ACM-INT",
+              "model": "IQ7A",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779889425,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-01714-r02"
+            }
+          ],
+          "meters": [
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "Envoy-S-Metered-EU",
+              "sku": null,
+              "model": "Envoy-S-Metered-EU",
+              "status": "normal",
+              "active": true,
+              "state": "enabled",
+              "last_report_at": 1779889500,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-00654-r06",
+              "config_type": "Production"
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "Envoy-S-Metered-EU",
+              "sku": null,
+              "model": "Envoy-S-Metered-EU",
+              "status": "normal",
+              "active": true,
+              "state": "enabled",
+              "last_report_at": 1779889500,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-00654-r06",
+              "config_type": "Net"
+            }
+          ],
+          "gateways": [
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "Envoy-S-Metered-EU",
+              "sku": "ENV-S-WM-230",
+              "model": "Envoy-S-Metered-EU",
+              "status": "normal",
+              "active": true,
+              "emu_sw_version": "D8.3.5169.260419 (d123b2)",
+              "cellular_modem": {
+                "imei": "N/A",
+                "sku": "N/A",
+                "part_num": "N/A",
+                "plan_start_date": null,
+                "plan_end_date": null
+              },
+              "last_report_at": 1779889864,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-00654-r06"
+            }
+          ],
+          "q_relays": [
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "product_name": "IQ Relay 2.0",
+              "sku": "Q-RELAY-2-3P-ITA",
+              "model": "",
+              "status": "normal",
+              "active": true,
+              "last_report_at": 1779888493,
+              "serial_number": "[REDACTED]",
+              "part_number": "800-00606-r02"
+            }
+          ]
+        },
+        "system_id": "[REDACTED]",
+        "total_devices": 16
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/latest_telemetry",
+      "body": {
+        "system_id": "[REDACTED]",
+        "items": "devices",
+        "devices": {
+          "meters": [
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 1,
+              "last_report_at": 1779889500,
+              "power": 3771
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 2,
+              "last_report_at": null,
+              "power": null
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 3,
+              "last_report_at": null,
+              "power": null
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 1,
+              "last_report_at": 1779889500,
+              "power": 946
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 2,
+              "last_report_at": null,
+              "power": null
+            },
+            {
+              "id": "[REDACTED]",
+              "name": "[REDACTED]",
+              "channel": 3,
+              "last_report_at": null,
+              "power": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

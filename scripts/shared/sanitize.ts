@@ -1,4 +1,22 @@
-const SECRET_PATTERNS = [/token/i, /secret/i, /password/i, /authorization/i, /bearer/i, /key/i];
+const SECRET_PATTERNS = [
+  /token/i,
+  /secret/i,
+  /password/i,
+  /authorization/i,
+  /bearer/i,
+  /key/i,
+  /serial/i,
+  /address/i,
+  /postal/i,
+  /email/i,
+  /phone/i,
+  /owner/i,
+  /installer/i,
+  /^id$/i,
+  /^system_id$/i,
+  /^name$/i,
+  /^public_name$/i
+];
 
 export function sanitize(value: unknown): unknown {
   if (Array.isArray(value)) {

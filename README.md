@@ -65,7 +65,7 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 - Production magic-link login uses `/auth/callback` to exchange Supabase codes into browser sessions, then redirects to `/dashboard`.
 - Production login and demo seeding were manually validated; dashboard reaches `Supabase live`.
 - Supabase readiness is complete for the MVP foundation: migration reset, RLS, audit append-only, and demo cleanup have been verified.
-- Enphase cloud discovery is in progress: the WattBridge Enphase application is Live on the Watt plan, and local OAuth/token helper scripts are prepared. Real discovery is blocked until the local OAuth authorization code is exchanged and a target system is selected.
+- Enphase cloud discovery is in progress: OAuth token exchange succeeded locally, initial read-only cloud discovery captured sanitized fixtures for systems, summary, devices, and latest telemetry, and historical import/export telemetry checks remain pending.
 - `npm audit --omit=dev` currently reports a moderate PostCSS advisory through Next.js; the suggested forced fix downgrades Next and should not be applied blindly.
 
 ## Local Development
@@ -77,6 +77,7 @@ npm test
 npm run typecheck
 npm run build
 npm run check:supabase-readiness
+npm run enphase:configure
 npm run enphase:token
 npm run discover:enphase
 supabase db query --linked -f scripts/supabase-authenticated-rls.sql
@@ -112,4 +113,4 @@ Create `.env.local` from `.env.example` when the Supabase project is ready.
 
 ## Recommended Next Step
 
-Complete Enphase read-only discovery with local-only credentials, capture sanitized fixtures, then update the Enphase capability matrix and storage assumptions before moving to SmartThings read-only discovery.
+Extend Enphase read-only discovery to production/consumption/import/export historical telemetry endpoints over a small recent window, then update the capability matrix and storage assumptions before moving to SmartThings read-only discovery.

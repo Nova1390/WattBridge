@@ -78,11 +78,17 @@ Authentication requirements:
 
 Current discovery status:
 
-- Cloud script is prepared for read-only calls but has not been run against a real account in this repo session.
 - Enphase developer application exists for WattBridge and is Live on the Watt plan.
 - Current application access controls include System Details, Site Level Production Monitoring, Site Level Consumption Monitoring, and EV Charger Monitoring.
-- Local environment still needs the application credentials and an OAuth authorization code in `.env.local` before token exchange can run.
-- First real cloud run should start with `/systems`, then use the returned or configured `system_id` for summary, devices, latest telemetry, and import/export capability checks.
+- OAuth authorization-code exchange succeeded locally and `.env.local` now holds Enphase access/refresh tokens outside Git.
+- Read-only cloud discovery ran successfully against the target account.
+- Sanitized fixture: `fixtures/discovery/enphase-cloud.json`.
+- Discovered one Enphase system. The repo fixture redacts system identifiers, names, address data, serial numbers, tokens, keys, and authorization values.
+- Successful endpoint checks: `/systems`, `/systems/{system_id}/summary`, `/systems/{system_id}/devices`, and `/systems/{system_id}/latest_telemetry`.
+- Device inventory shows 12 microinverters, 2 meters, 1 gateway, and 1 Q Relay.
+- Latest telemetry currently exposes meter readings with `channel`, `last_report_at`, and `power` fields.
+- System summary exposes `current_power`, `energy_lifetime`, `energy_today`, `last_interval_end_at`, `last_report_at`, `size_w`, and battery fields with zero battery capacity for this installation.
+- Import/export historical telemetry endpoints still need explicit discovery.
 
 Local OAuth workflow:
 
@@ -105,6 +111,7 @@ Official references checked:
 ## WattBridge Implications
 
 - Enphase Cloud API is likely enough for historical dashboard views and source-refreshed history, within range and rate limits.
+- The first real discovery confirms cloud summary and latest meter telemetry are accessible on the Watt plan for this system.
 - It may not be enough by itself for fast surplus detection because interval telemetry is typically 15 minutes, sometimes 5 minutes, and cloud live status has plan/cost/support constraints.
 - The safest initial architecture is hybrid: use Cloud API for account-authorized historical/site data, and validate local Envoy access for live surplus decisions.
 - WattBridge should not store full Enphase history locally until Phase 0 proves which windows can be reliably refreshed from Enphase.
@@ -131,7 +138,9 @@ Official references checked:
 ## Phase 0 Checklist
 
 - Capture sanitized sample responses.
+- Completed for `/systems`, `/summary`, `/devices`, and `/latest_telemetry`.
 - Capture sanitized historical/recent-data responses if available.
+- Pending for production/consumption/import/export telemetry endpoints.
 - Verify readings against the vendor app.
 - Document authentication flow.
 - Document local network requirements.
