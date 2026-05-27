@@ -46,6 +46,24 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 - Local/LAN access: optional edge connector, initially Mac if Enphase Envoy or future local integrations require it.
 - Safety rule: no real device command before safety model, manual approval flow, and command confirmation are implemented and tested.
 
+## Deployed Foundation
+
+- Vercel production URL: https://wattbridge.vercel.app
+- Current mode: mock-safe dashboard, no real device commands.
+- Supabase: migration and client boundary are in the repo; remote project creation still requires Supabase CLI authentication.
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+npm test
+npm run typecheck
+npm run build
+```
+
+Create `.env.local` from `.env.example` when the Supabase project is ready.
+
 ## Documentation Map
 
 - [Project brief](docs/00-project-brief.md)

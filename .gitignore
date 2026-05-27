@@ -21,7 +21,9 @@ pnpm-debug.log*
 .DS_Store
 .turbo/
 coverage/
+tsconfig.tsbuildinfo
 
 # supabase
 supabase/.branches/
 supabase/.temp/
+.vercel

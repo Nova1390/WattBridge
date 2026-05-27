@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="WattBridge">
+  <rect width="128" height="128" rx="24" fill="#154734"/>
+  <path d="M34 72c14-30 46-30 60 0" fill="none" stroke="#f6f4ef" stroke-width="10" stroke-linecap="round"/>
+  <path d="M61 28 45 66h18l-8 34 30-50H66l10-22H61Z" fill="#f2c14e"/>
+</svg>
