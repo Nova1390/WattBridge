@@ -74,6 +74,7 @@ npm run dev
 npm test
 npm run typecheck
 npm run build
+npm run check:supabase-readiness
 ```
 
 Create `.env.local` from `.env.example` when the Supabase project is ready.

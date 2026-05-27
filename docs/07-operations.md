@@ -60,7 +60,28 @@ Initial backup scope:
 - Sanitized API fixtures.
 - Edge connector configuration if one is introduced later.
 
-Secrets backup must be decided separately before real deployment.
+Current restore posture:
+
+- Recreate application schema from versioned files in `supabase/migrations/`.
+- Reapply Supabase project auth/config from `supabase/config.toml`.
+- Redeploy the frontend from GitHub/Vercel using the `main` branch.
+- Recreate demo state through the authenticated dashboard seed action.
+
+Secrets backup must be decided separately before real vendor integrations. Vendor credentials, OAuth refresh tokens, and gateway credentials must not be stored in Git, Vercel client-visible variables, or Brain.
+
+## Supabase Readiness
+
+Repeatable checks:
+
+- `npm run check:supabase-readiness` verifies anonymous RLS behavior and anonymous audit update/delete blocking with the public anon key.
+- `supabase db query --linked` can verify that RLS is enabled on all public control-plane tables.
+
+Current findings:
+
+- RLS is enabled on all 9 public control-plane tables.
+- Anonymous reads return no protected rows.
+- Anonymous attempts to update/delete `audit_events` update/delete no rows.
+- Authenticated cross-user isolation still needs a dedicated test-user harness before multi-user behavior is supported.
 
 ## Operational Runbook Draft
 

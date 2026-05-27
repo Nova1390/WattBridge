@@ -9,6 +9,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "check:supabase-readiness": "tsx scripts/supabase-readiness.ts",
     "discover:enphase": "tsx scripts/enphase-cloud-discovery.ts",
     "discover:smartthings": "tsx scripts/smartthings-discovery.ts"
   },

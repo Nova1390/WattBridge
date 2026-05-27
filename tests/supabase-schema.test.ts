@@ -30,6 +30,7 @@ describe("Supabase migration guardrails", () => {
   it("keeps audit events append-only for authenticated clients", () => {
     expect(migration).toContain('create policy "Authenticated users read own audit events"');
     expect(migration).toContain('create policy "Authenticated users append own audit events"');
+    expect(migration).not.toMatch(/create policy .* on public\.audit_events\s+for all to authenticated/i);
     expect(migration).not.toMatch(/create policy .*audit events.*for update/i);
     expect(migration).not.toMatch(/create policy .*audit events.*for delete/i);
   });

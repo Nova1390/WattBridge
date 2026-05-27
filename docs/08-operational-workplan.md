@@ -89,6 +89,10 @@ Current findings:
 - Production login works and dashboard reaches `Supabase live`.
 - Demo seed writes current state rows to Supabase.
 - Demo recommendation, approval, and audit seed IDs must remain stable so repeated clicks do not create noisy duplicates.
+- `npm run check:supabase-readiness` verifies anonymous RLS behavior and anonymous audit update/delete blocking using the public anon key.
+- Remote readiness check passed: all protected anon reads returned no rows, and anon audit update/delete touched no rows.
+- Remote schema check confirms RLS is enabled on all 9 public control-plane tables.
+- Authenticated cross-user isolation still needs a dedicated test user harness before multi-user behavior is supported.
 
 ### Block 3: Enphase Read-Only Discovery
 

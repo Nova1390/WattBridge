@@ -27,6 +27,8 @@ Sensitive data includes:
 - Use SmartThings OAuth for durable integrations; use Personal Access Tokens only for short discovery/testing.
 - Treat remote approval actions as high-risk and require authenticated identity plus audit logging.
 - Treat Vercel as public frontend hosting only; do not put vendor secrets in frontend environment variables.
+- Keep Supabase RLS enabled on every control-plane table.
+- Treat `audit_events` as append-only for normal authenticated clients.
 
 ## Local Network Risk
 
@@ -54,3 +56,19 @@ If ADR-0006 is accepted, Vercel hosts the webapp/PWA. Public Supabase client con
 - Which remote access option should be used for private MVP usage away from home?
 - What is the minimum retention needed for useful historical views?
 - How should backups handle secret material?
+
+## Supabase Readiness Checks
+
+Run these before adding real integrations:
+
+```bash
+npm run check:supabase-readiness
+```
+
+The script uses only the public Supabase anon key. It verifies that anonymous reads return no protected rows and that anonymous update/delete attempts against `audit_events` do not modify data. Authenticated cross-user isolation still needs a dedicated test user harness before multi-user behavior is supported.
+
+Current remote result:
+
+- Anonymous protected-table reads return no rows.
+- Anonymous `audit_events` update/delete attempts affect no rows.
+- RLS is enabled on all 9 public control-plane tables.
