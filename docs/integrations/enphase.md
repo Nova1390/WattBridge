@@ -68,6 +68,16 @@ Plan implications:
 - Kilowatt and Megawatt plans increase limits and add device-level monitoring/streaming, but are paid.
 - Live Status is documented as supported for IQ Gateway version 6.0.0 or newer and may have separate per-hit pricing on paid plans.
 
+API budget policy:
+
+- Treat the Watt plan call budget as a product constraint, not an implementation detail.
+- Do not poll Enphase Cloud on dashboard refresh.
+- Do not refresh all historical windows on every sync.
+- Prefer current-state cache plus explicit stale/degraded indicators.
+- Use source-refreshed history for user-requested chart windows and scheduled low-frequency refreshes.
+- Batch endpoint reads where the API allows it; otherwise space calls to stay under the 10 calls/minute limit.
+- Keep local Envoy discovery open as the likely path for fast surplus detection if cloud polling would exceed the monthly budget.
+
 Authentication requirements:
 
 - Monitoring APIs use OAuth 2.0 authorization-code flow for developer applications.
@@ -116,6 +126,7 @@ Official references checked:
 - Enphase Cloud API is likely enough for historical dashboard views and source-refreshed history, within range and rate limits.
 - The first real discovery confirms cloud summary and latest meter telemetry are accessible on the Watt plan for this system.
 - Recent 24-hour historical production, consumption, import, and export telemetry are accessible on the Watt plan for this system.
+- The Watt plan monthly call limit is too low for frequent polling. MVP design must be parsimonious: cache current state, show staleness, refresh historical windows deliberately, and avoid background loops that silently consume quota.
 - It may not be enough by itself for fast surplus detection because interval telemetry is typically 15 minutes, sometimes 5 minutes, and cloud live status has plan/cost/support constraints.
 - The safest initial architecture is hybrid: use Cloud API for account-authorized historical/site data, and validate local Envoy access for live surplus decisions.
 - WattBridge should not store full Enphase history locally for dashboard history if Enphase can refresh the needed windows within rate limits.
@@ -127,6 +138,7 @@ Official references checked:
 - Read photovoltaic and meter values.
 - Normalize power values into watts.
 - Normalize timestamps to UTC.
+- Enforce an explicit API budget before adding polling behavior.
 - Prefer source-provided history over unnecessary local duplication when reliability and rate limits allow it.
 - Mark sample quality when data is stale, partial, estimated, or unavailable.
 - Avoid leaking Enphase-specific fields into the core model.

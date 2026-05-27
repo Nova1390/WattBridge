@@ -46,7 +46,10 @@ Impact: Polling frequency, live status usage, and future device-level views may 
 
 Mitigation:
 
-- Design polling budgets before implementation.
+- Design a monthly and per-minute polling budget before implementation.
+- Prefer scheduled low-frequency sync and user-triggered refresh over dashboard-driven polling.
+- Cache current state and expose stale/degraded status rather than burning API calls to hide staleness.
+- Add adapter tests for rate-limit and quota-exhausted behavior before enabling background sync.
 - Prefer cached/source-refreshed historical windows over frequent polling.
 - Keep local Envoy discovery as a fallback for live surplus detection.
 

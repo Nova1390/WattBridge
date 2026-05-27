@@ -127,6 +127,7 @@ Current findings:
 - Recent 24-hour telemetry returned 96 production intervals and 96 consumption intervals, indicating 15-minute history.
 - Import/export telemetry is available but has a different interval array shape and must be normalized separately.
 - The committed fixture redacts household energy values, identifiers, serial numbers, tokens, keys, and authorization values.
+- The Watt plan call budget is low; Enphase Cloud must be used parsimoniously with explicit call budgets, scheduled refreshes, current-state caching, and stale/degraded UI instead of dashboard-driven polling.
 - Next real-data step: update ADR-0003 storage assumptions and prepare Enphase fixture-based adapter normalization tests.
 
 ### Block 4: SmartThings Read-Only Discovery

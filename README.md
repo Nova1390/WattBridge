@@ -66,6 +66,7 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 - Production login and demo seeding were manually validated; dashboard reaches `Supabase live`.
 - Supabase readiness is complete for the MVP foundation: migration reset, RLS, audit append-only, and demo cleanup have been verified.
 - Enphase cloud discovery is in progress: OAuth token exchange succeeded locally, read-only cloud discovery captured sanitized fixtures for systems, summary, devices, latest telemetry, and recent production/consumption/import/export telemetry.
+- Enphase Watt plan API calls are treated as scarce: cloud polling must be budgeted, cached, and decoupled from dashboard page loads.
 - `npm audit --omit=dev` currently reports a moderate PostCSS advisory through Next.js; the suggested forced fix downgrades Next and should not be applied blindly.
 
 ## Local Development

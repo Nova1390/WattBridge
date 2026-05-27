@@ -28,6 +28,7 @@ Minimum health signals:
 - Vercel deployment status and latest production URL.
 - Supabase connectivity and migration status.
 - Last energy sample timestamp.
+- Enphase API quota/budget status once cloud sync is enabled.
 - Last SmartThings sync timestamp.
 - Adapter-specific last error.
 - Dashboard stale/degraded state.
@@ -39,6 +40,7 @@ Logs should include:
 
 - Startup configuration summary without secrets.
 - Integration sync start, success, and failure.
+- Enphase call counts per sync window without secrets or raw payloads.
 - Rule evaluation decisions.
 - Recommendation lifecycle.
 - Command lifecycle when commands are eventually enabled.
@@ -49,6 +51,19 @@ Logs must not include:
 - Passwords.
 - Full authorization headers.
 - Unredacted raw responses containing credentials or private identifiers.
+
+## Enphase API Budget
+
+The Watt plan API budget is intentionally treated as scarce.
+
+Operational rules before enabling Enphase background sync:
+
+- Define a fixed sync cadence and monthly call budget.
+- Never tie Enphase polling directly to dashboard page loads.
+- Prefer one scheduled sync that updates Supabase current state over many browser-triggered reads.
+- Mark dashboard data as stale/degraded when the budget is exhausted or sync is delayed.
+- Keep discovery scripts manually run and rate-limited; `ENPHASE_DISCOVERY_DELAY_MS` defaults to spacing requests below the 10 calls/minute limit.
+- Evaluate local Envoy reads before relying on cloud polling for surplus decisions.
 
 ## Backup And Recovery
 
