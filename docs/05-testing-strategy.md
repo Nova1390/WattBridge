@@ -79,6 +79,7 @@ Cover:
 - Token storage behavior.
 - Local network exposure.
 - Supabase row-level access if ADR-0005 is approved.
+- Static migration guardrails for RLS coverage and append-only audit policies.
 - OAuth callback CSRF/state validation.
 - Redaction in logs.
 - Rejection of unauthenticated local API access if auth is enabled.

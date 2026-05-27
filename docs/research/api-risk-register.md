@@ -182,3 +182,27 @@ Mitigation:
 - Define retention policy.
 - Redact logs.
 - Keep data local unless explicitly changed by ADR.
+
+## Vercel GitHub Connection
+
+Risk: Vercel may not be authorized to access the GitHub repository even when local GitHub CLI access works.
+
+Impact: Preview deployments and Preview environment variables may not be automated from pull requests.
+
+Mitigation:
+
+- Authorize or refresh the Vercel GitHub integration for `Nova1390/WattBridge` from the Vercel dashboard.
+- Keep production deploys available through the Vercel CLI while the GitHub connection is blocked.
+- Document Preview environment variable setup after the GitHub connection is repaired.
+
+## Dependency Advisory Handling
+
+Risk: `npm audit --omit=dev` currently reports a moderate PostCSS advisory through Next.js and suggests a forced fix that would downgrade Next.
+
+Impact: Applying the forced fix blindly could break the app or regress the framework version.
+
+Mitigation:
+
+- Do not run `npm audit fix --force` for this advisory.
+- Track upstream Next.js/PostCSS updates.
+- Re-run audit after dependency updates and document the result.

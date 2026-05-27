@@ -53,6 +53,16 @@ The initial frontend hosting choice is Vercel, used only as webapp/PWA hosting. 
 - Supabase project: `gckonxhwhrgfufkbceuc`
 - Supabase URL: `https://gckonxhwhrgfufkbceuc.supabase.co`
 - Supabase status: initial control-plane migration applied; Auth redirect URLs configured for local dev and Vercel.
+- Operational workplan: [docs/08-operational-workplan.md](docs/08-operational-workplan.md)
+
+## Current External Setup Notes
+
+- Vercel production dashboard responds successfully at `/dashboard`.
+- Supabase linked project query confirms the expected public tables exist remotely.
+- Vercel GitHub connection still needs dashboard-side authorization or repair before preview deploys can be automated.
+- Preview environment variables should be configured after GitHub connection is fixed.
+- Production login and demo seeding need manual browser validation with a real user session.
+- `npm audit --omit=dev` currently reports a moderate PostCSS advisory through Next.js; the suggested forced fix downgrades Next and should not be applied blindly.
 
 ## Local Development
 
@@ -76,6 +86,7 @@ Create `.env.local` from `.env.example` when the Supabase project is ready.
 - [Testing strategy](docs/05-testing-strategy.md)
 - [Security and privacy](docs/06-security-and-privacy.md)
 - [Operations](docs/07-operations.md)
+- [Operational workplan](docs/08-operational-workplan.md)
 - [Glossary](docs/glossary.md)
 - [Decisions](docs/decisions/)
 - [Integrations](docs/integrations/)
@@ -93,4 +104,4 @@ Create `.env.local` from `.env.example` when the Supabase project is ready.
 
 ## Recommended Next Step
 
-Review and either accept, revise, or reject ADR-0001. After that, begin Phase 0 discovery by validating the available Enphase and SmartThings APIs against the real home environment.
+Complete Foundation Alignment from the operational workplan: repair Vercel GitHub connection, configure Preview environment variables, validate production login/demo seeding, then move into Supabase readiness and read-only API discovery.

@@ -1,32 +1,37 @@
 # Operations
 
-## Deployment Assumption
+## Current Deployment Shape
 
-The first deployment should run on a trusted Mac inside the home network.
+The current deployable foundation runs as:
 
-Candidate hosts:
+- Frontend/PWA: Vercel, production URL `https://wattbridge.vercel.app`.
+- Control plane: Supabase project `gckonxhwhrgfufkbceuc`.
+- Local runtime: none required for the mock-safe foundation.
+- Edge connector: optional future component, initially Mac only if local Envoy/LAN access proves necessary.
 
-- Mac for discovery and first private MVP.
-- Raspberry Pi or similar always-on device for home operation.
-- NAS or home server if already available.
+The Mac is no longer the primary application host. It is a candidate edge connector host for local integrations that cannot be reached reliably through vendor cloud APIs.
 
 ## Runtime Expectations
 
 - Service can restart without losing configuration.
 - Integrations report degraded status instead of crashing the service.
 - Dashboard shows stale data clearly.
-- Dashboard can be reached away from home only through the selected secure access path.
+- Dashboard can be reached away from home through Vercel plus Supabase Auth.
 - Logs are readable during local troubleshooting.
+- Vendor secrets are never stored in Vercel client-visible environment variables.
+- Real device commands stay disabled until manual approval, safety rules, and command confirmation tests are in place.
 
 ## Health Checks
 
 Minimum health signals:
 
-- Backend process status.
-- Database connectivity.
+- Vercel deployment status and latest production URL.
+- Supabase connectivity and migration status.
 - Last energy sample timestamp.
 - Last SmartThings sync timestamp.
 - Adapter-specific last error.
+- Dashboard stale/degraded state.
+- Audit event insertion health.
 
 ## Logging
 
@@ -49,18 +54,28 @@ Logs must not include:
 
 Initial backup scope:
 
-- Configuration.
-- Local database.
+- Supabase schema migrations.
+- Supabase project configuration notes.
 - ADRs and documentation.
+- Sanitized API fixtures.
+- Edge connector configuration if one is introduced later.
 
 Secrets backup must be decided separately before real deployment.
 
 ## Operational Runbook Draft
 
-1. Check service health.
-2. Check integration health.
-3. Confirm last successful sample time.
-4. Inspect recent errors with redaction.
-5. Restart service if the process is unhealthy.
-6. Disable automation mode before troubleshooting real device-control behavior.
-7. If remote access fails, verify the secure tunnel or VPN before changing backend exposure.
+1. Check Vercel production deployment and dashboard HTTP status.
+2. Check Supabase project availability and migrations.
+3. Check authentication redirect behavior on local and production URLs.
+4. Check integration health once real adapters are enabled.
+5. Confirm last successful sample time and stale-data indicators.
+6. Inspect recent errors with redaction.
+7. Keep real commands disabled before troubleshooting device-control behavior.
+8. If remote access fails, verify Vercel/Supabase/Auth configuration before considering any local exposure.
+
+## External Setup Blockers
+
+- Vercel GitHub connection is not yet confirmed. A CLI attempt to connect `Nova1390/WattBridge` failed with a repository access error even though GitHub CLI can read the repository. The likely fix is to authorize or refresh the Vercel GitHub integration for the repository from the Vercel dashboard.
+- Preview environment variables are not configured yet. Configure them after the Vercel GitHub connection works.
+- Production login requires a real user session and must be manually validated in the browser.
+- `npm audit --omit=dev` reports a moderate PostCSS advisory through the current Next.js dependency. The proposed forced fix would downgrade Next to an old breaking version, so this should be tracked and revisited through a safe Next.js update rather than force-applied.

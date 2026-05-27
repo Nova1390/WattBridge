@@ -1,5 +1,19 @@
 # Roadmap
 
+## Execution Discipline
+
+Work should proceed through small, verifiable blocks tracked in [Operational Workplan](08-operational-workplan.md).
+
+Each meaningful block must update tests, documentation, and Brain memory when it changes durable project state, decisions, risks, or next actions.
+
+Current foundation status:
+
+- Vercel production dashboard is deployed at `https://wattbridge.vercel.app`.
+- Supabase project `gckonxhwhrgfufkbceuc` exists and has the initial control-plane migration applied.
+- Real device commands are not implemented.
+- Vercel GitHub connection is blocked by a repository access error and needs dashboard-side authorization or repair.
+- Preview environment variables are pending until Vercel GitHub connection is fixed.
+
 ## Phase 0: Discovery And Validation
 
 Objectives:
