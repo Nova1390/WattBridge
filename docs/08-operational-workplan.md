@@ -67,7 +67,7 @@ Exit criteria:
 
 ### Block 2: Supabase Readiness
 
-Status: in progress; clean local migration reset is blocked until Docker/Supabase local is available.
+Status: complete.
 
 Goals:
 
@@ -94,7 +94,7 @@ Current findings:
 - Remote schema check confirms RLS is enabled on all 9 public control-plane tables.
 - Authenticated RLS SQL harness passes: own demo site visible, other simulated user hidden, authenticated audit insert allowed, authenticated audit update/delete blocked.
 - Demo duplicates from pre-stable seed clicks have been cleaned; stable demo rows remain.
-- Clean local migration reset is currently blocked because Docker/Supabase local is unavailable.
+- Clean local migration reset passed with `supabase db reset --local --no-seed`.
 
 ### Block 3: Enphase Read-Only Discovery
 

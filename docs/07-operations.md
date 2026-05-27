@@ -85,7 +85,7 @@ Current findings:
 - Anonymous attempts to update/delete `audit_events` update/delete no rows.
 - Authenticated RLS harness passes for simulated users.
 - Demo duplicates from pre-stable seed clicks have been cleaned.
-- Clean local migration reset is blocked until Docker/Supabase local is available on this machine.
+- Clean local migration reset passes with Docker/Supabase local using `supabase db reset --local --no-seed`.
 
 ## Operational Runbook Draft
 

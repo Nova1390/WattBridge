@@ -74,3 +74,4 @@ Current remote result:
 - Anonymous `audit_events` update/delete attempts affect no rows.
 - RLS is enabled on all 9 public control-plane tables.
 - Authenticated RLS SQL harness passes: own demo site is visible, another simulated `auth.uid()` cannot see it, authenticated audit insert is allowed, and authenticated audit update/delete are blocked.
+- Clean local migration reset passes from versioned migrations.
