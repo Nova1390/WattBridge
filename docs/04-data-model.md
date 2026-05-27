@@ -4,6 +4,8 @@ This is an initial conceptual model. Concrete schema details should be decided a
 
 WattBridge should not store data simply because it can. If Enphase or SmartThings can reliably provide the needed live and historical windows through supported APIs, the local model should favor cached current state, normalized aggregates needed for the UI, rule-evaluation windows, and audit records.
 
+Initial Enphase cloud discovery supports this approach: recent production, consumption, import, and export history can be refreshed from Enphase, while WattBridge still needs durable current state, integration health, recommendation inputs, approval traces, and audit records.
+
 ## Core Entities
 
 ### Site

@@ -88,7 +88,10 @@ Current discovery status:
 - Device inventory shows 12 microinverters, 2 meters, 1 gateway, and 1 Q Relay.
 - Latest telemetry currently exposes meter readings with `channel`, `last_report_at`, and `power` fields.
 - System summary exposes `current_power`, `energy_lifetime`, `energy_today`, `last_interval_end_at`, `last_report_at`, `size_w`, and battery fields with zero battery capacity for this installation.
-- Import/export historical telemetry endpoints still need explicit discovery.
+- Historical telemetry discovery succeeded for production meter, consumption meter, energy import, and energy export over a recent 24-hour window.
+- Production and consumption telemetry returned 96 intervals for 24 hours, matching 15-minute interval data.
+- Import and export telemetry returned interval arrays with `wh_imported` and `wh_exported` fields. The response shape differs from production/consumption and must be normalized separately.
+- The committed fixture redacts household energy values as well as identifiers and secrets, so it preserves payload shape but not real consumption/export profiles.
 
 Local OAuth workflow:
 
@@ -112,9 +115,11 @@ Official references checked:
 
 - Enphase Cloud API is likely enough for historical dashboard views and source-refreshed history, within range and rate limits.
 - The first real discovery confirms cloud summary and latest meter telemetry are accessible on the Watt plan for this system.
+- Recent 24-hour historical production, consumption, import, and export telemetry are accessible on the Watt plan for this system.
 - It may not be enough by itself for fast surplus detection because interval telemetry is typically 15 minutes, sometimes 5 minutes, and cloud live status has plan/cost/support constraints.
 - The safest initial architecture is hybrid: use Cloud API for account-authorized historical/site data, and validate local Envoy access for live surplus decisions.
-- WattBridge should not store full Enphase history locally until Phase 0 proves which windows can be reliably refreshed from Enphase.
+- WattBridge should not store full Enphase history locally for dashboard history if Enphase can refresh the needed windows within rate limits.
+- WattBridge should still store current state, stale/degraded state, recommendation inputs, approval traces, audit events, and any short rolling windows required for safety decisions.
 - WattBridge should avoid relying on deprecated endpoints and track Enphase API release notes during implementation.
 
 ## Adapter Responsibilities
@@ -140,7 +145,7 @@ Official references checked:
 - Capture sanitized sample responses.
 - Completed for `/systems`, `/summary`, `/devices`, and `/latest_telemetry`.
 - Capture sanitized historical/recent-data responses if available.
-- Pending for production/consumption/import/export telemetry endpoints.
+- Completed for production meter, consumption meter, energy import, and energy export telemetry over a recent 24-hour window.
 - Verify readings against the vendor app.
 - Document authentication flow.
 - Document local network requirements.

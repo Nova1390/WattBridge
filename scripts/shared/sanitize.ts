@@ -15,7 +15,19 @@ const SECRET_PATTERNS = [
   /^id$/i,
   /^system_id$/i,
   /^name$/i,
-  /^public_name$/i
+  /^public_name$/i,
+  /^current_power$/i,
+  /^energy_lifetime$/i,
+  /^energy_today$/i,
+  /^size_w$/i,
+  /^battery_charge_w$/i,
+  /^battery_discharge_w$/i,
+  /^battery_capacity_wh$/i,
+  /^power$/i,
+  /^wh_del$/i,
+  /^enwh$/i,
+  /^wh_imported$/i,
+  /^wh_exported$/i
 ];
 
 export function sanitize(value: unknown): unknown {

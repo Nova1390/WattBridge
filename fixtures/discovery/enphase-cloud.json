@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-05-27T13:51:23.484Z",
+  "captured_at": "2026-05-27T14:10:27.453Z",
   "note": "Read-only Enphase Cloud discovery. Secrets redacted.",
   "results": [
     {
@@ -20,13 +20,13 @@
             "address": "[REDACTED]",
             "connection_type": "wifi",
             "status": "normal",
-            "last_report_at": 1779889864,
-            "last_energy_at": 1779889636,
+            "last_report_at": 1779890765,
+            "last_energy_at": 1779890734,
             "operational_at": 1665093600,
             "attachment_type": null,
             "interconnect_date": null,
-            "energy_lifetime": -1,
-            "energy_today": -1,
+            "energy_lifetime": "[REDACTED]",
+            "energy_today": "[REDACTED]",
             "system_size": -1,
             "other_references": [
               "New Elettrik"
@@ -44,17 +44,17 @@
         "source": "meter",
         "status": "normal",
         "system_id": "[REDACTED]",
-        "current_power": 3771,
-        "energy_lifetime": 16000319,
-        "energy_today": 17209,
-        "last_interval_end_at": 1779889636,
-        "last_report_at": 1779889864,
+        "current_power": "[REDACTED]",
+        "energy_lifetime": "[REDACTED]",
+        "energy_today": "[REDACTED]",
+        "last_interval_end_at": 1779890734,
+        "last_report_at": 1779890765,
         "operational_at": 1665093600,
-        "size_w": 5235,
+        "size_w": "[REDACTED]",
         "summary_date": "2026-05-27",
-        "battery_charge_w": 0,
-        "battery_discharge_w": 0,
-        "battery_capacity_wh": 0
+        "battery_charge_w": "[REDACTED]",
+        "battery_discharge_w": "[REDACTED]",
+        "battery_capacity_wh": "[REDACTED]"
       }
     },
     {
@@ -72,7 +72,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889393,
+              "last_report_at": 1779890297,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -84,7 +84,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889395,
+              "last_report_at": 1779890298,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -96,7 +96,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889514,
+              "last_report_at": 1779890417,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -108,7 +108,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889456,
+              "last_report_at": 1779890359,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -120,7 +120,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889515,
+              "last_report_at": 1779890419,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -132,7 +132,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889605,
+              "last_report_at": 1779890509,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -144,7 +144,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889454,
+              "last_report_at": 1779890358,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -156,7 +156,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889636,
+              "last_report_at": 1779890539,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -168,7 +168,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889575,
+              "last_report_at": 1779890479,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -180,7 +180,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889363,
+              "last_report_at": 1779890267,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -192,7 +192,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889575,
+              "last_report_at": 1779890478,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             },
@@ -204,7 +204,7 @@
               "model": "IQ7A",
               "status": "normal",
               "active": true,
-              "last_report_at": 1779889425,
+              "last_report_at": 1779890328,
               "serial_number": "[REDACTED]",
               "part_number": "800-01714-r02"
             }
@@ -219,7 +219,7 @@
               "status": "normal",
               "active": true,
               "state": "enabled",
-              "last_report_at": 1779889500,
+              "last_report_at": 1779890400,
               "serial_number": "[REDACTED]",
               "part_number": "800-00654-r06",
               "config_type": "Production"
@@ -233,7 +233,7 @@
               "status": "normal",
               "active": true,
               "state": "enabled",
-              "last_report_at": 1779889500,
+              "last_report_at": 1779890400,
               "serial_number": "[REDACTED]",
               "part_number": "800-00654-r06",
               "config_type": "Net"
@@ -256,7 +256,7 @@
                 "plan_start_date": null,
                 "plan_end_date": null
               },
-              "last_report_at": 1779889864,
+              "last_report_at": 1779890765,
               "serial_number": "[REDACTED]",
               "part_number": "800-00654-r06"
             }
@@ -292,45 +292,1855 @@
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 1,
-              "last_report_at": 1779889500,
-              "power": 3771
+              "last_report_at": 1779890400,
+              "power": "[REDACTED]"
             },
             {
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 2,
               "last_report_at": null,
-              "power": null
+              "power": "[REDACTED]"
             },
             {
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 3,
               "last_report_at": null,
-              "power": null
+              "power": "[REDACTED]"
             },
             {
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 1,
-              "last_report_at": 1779889500,
-              "power": 946
+              "last_report_at": 1779890400,
+              "power": "[REDACTED]"
             },
             {
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 2,
               "last_report_at": null,
-              "power": null
+              "power": "[REDACTED]"
             },
             {
               "id": "[REDACTED]",
               "name": "[REDACTED]",
               "channel": 3,
               "last_report_at": null,
-              "power": null
+              "power": "[REDACTED]"
             }
           ]
+        }
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/telemetry/production_meter?start_at=1779804334&end_at=1779890734",
+      "body": {
+        "system_id": "[REDACTED]",
+        "granularity": "day",
+        "total_devices": 1,
+        "start_at": 1779804334,
+        "end_at": 1779890734,
+        "items": "intervals",
+        "intervals": [
+          {
+            "end_at": 1779804900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779805800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779806700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779807600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779808500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779809400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779810300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779811200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779812100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779813000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779813900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779814800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779815700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779816600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779817500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779818400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779819300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779820200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779821100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779822000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779822900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779823800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779824700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779825600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779826500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779827400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779828300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779829200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779830100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779831000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779831900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779832800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779833700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779834600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779835500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779836400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779837300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779838200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779839100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779840000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779840900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779841800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779842700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779843600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779844500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779845400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779846300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779847200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779848100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779849000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779849900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779850800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779851700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779852600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779853500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779854400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779855300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779856200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779857100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779858000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779858900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779859800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779860700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779861600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779862500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779863400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779864300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779865200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779866100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779867000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779867900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779868800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779869700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779870600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779871500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779872400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779873300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779874200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779875100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779876000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779876900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779877800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779878700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779879600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779880500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779881400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779882300,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779883200,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779884100,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779885000,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779885900,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779886800,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779887700,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779888600,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779889500,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          },
+          {
+            "end_at": 1779890400,
+            "devices_reporting": 1,
+            "wh_del": "[REDACTED]"
+          }
+        ]
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/telemetry/consumption_meter?start_at=1779804334&end_at=1779890734",
+      "body": {
+        "system_id": "[REDACTED]",
+        "granularity": "day",
+        "total_devices": 1,
+        "start_at": 1779804334,
+        "end_at": 1779890734,
+        "items": "intervals",
+        "intervals": [
+          {
+            "end_at": 1779804900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779805800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779806700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779807600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779808500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779809400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779810300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779811200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779812100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779813000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779813900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779814800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779815700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779816600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779817500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779818400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779819300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779820200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779821100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779822000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779822900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779823800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779824700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779825600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779826500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779827400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779828300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779829200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779830100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779831000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779831900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779832800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779833700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779834600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779835500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779836400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779837300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779838200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779839100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779840000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779840900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779841800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779842700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779843600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779844500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779845400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779846300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779847200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779848100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779849000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779849900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779850800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779851700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779852600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779853500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779854400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779855300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779856200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779857100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779858000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779858900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779859800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779860700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779861600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779862500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779863400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779864300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779865200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779866100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779867000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779867900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779868800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779869700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779870600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779871500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779872400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779873300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779874200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779875100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779876000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779876900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779877800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779878700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779879600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779880500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779881400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779882300,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779883200,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779884100,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779885000,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779885900,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779886800,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779887700,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779888600,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779889500,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          },
+          {
+            "end_at": 1779890400,
+            "devices_reporting": 1,
+            "enwh": "[REDACTED]"
+          }
+        ],
+        "meta": {
+          "status": "normal",
+          "last_report_at": 1779890765,
+          "last_energy_at": 1779890734,
+          "operational_at": 1665093600
+        }
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/energy_import_telemetry?start_at=1779804334&end_at=1779890734",
+      "body": {
+        "system_id": "[REDACTED]",
+        "granularity": "day",
+        "total_devices": 0,
+        "start_at": 1779804334,
+        "end_at": 1779890734,
+        "items": "intervals",
+        "intervals": [
+          [
+            {
+              "end_at": 1779804900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779805800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779806700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779807600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779808500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779809400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779810300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779811200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779812100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779813000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779813900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779814800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779815700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779816600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779817500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779818400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779819300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779820200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779821100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779822000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779822900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779823800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779824700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779825600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779826500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779827400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779828300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779829200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779830100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779831000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779831900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779832800,
+              "wh_imported": "[REDACTED]"
+            }
+          ],
+          [
+            {
+              "end_at": 1779833700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779834600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779835500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779836400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779837300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779838200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779839100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779840000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779840900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779841800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779842700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779843600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779844500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779845400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779846300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779847200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779848100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779849000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779849900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779850800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779851700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779852600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779853500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779854400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779855300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779856200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779857100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779858000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779858900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779859800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779860700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779861600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779862500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779863400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779864300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779865200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779866100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779867000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779867900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779868800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779869700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779870600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779871500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779872400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779873300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779874200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779875100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779876000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779876900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779877800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779878700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779879600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779880500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779881400,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779882300,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779883200,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779884100,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779885000,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779885900,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779886800,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779887700,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779888600,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779889500,
+              "wh_imported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779890400,
+              "wh_imported": "[REDACTED]"
+            }
+          ]
+        ],
+        "meta": {
+          "status": "normal",
+          "last_report_at": 1779890765,
+          "last_energy_at": 1779890734,
+          "operational_at": 1665093600
+        }
+      }
+    },
+    {
+      "status": 200,
+      "path": "/systems/[REDACTED]/energy_export_telemetry?start_at=1779804334&end_at=1779890734",
+      "body": {
+        "system_id": "[REDACTED]",
+        "granularity": "day",
+        "total_devices": 0,
+        "start_at": 1779804334,
+        "end_at": 1779890734,
+        "items": "intervals",
+        "intervals": [
+          [
+            {
+              "end_at": 1779804900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779805800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779806700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779807600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779808500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779809400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779810300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779811200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779812100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779813000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779813900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779814800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779815700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779816600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779817500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779818400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779819300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779820200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779821100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779822000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779822900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779823800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779824700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779825600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779826500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779827400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779828300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779829200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779830100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779831000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779831900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779832800,
+              "wh_exported": "[REDACTED]"
+            }
+          ],
+          [
+            {
+              "end_at": 1779833700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779834600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779835500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779836400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779837300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779838200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779839100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779840000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779840900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779841800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779842700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779843600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779844500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779845400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779846300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779847200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779848100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779849000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779849900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779850800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779851700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779852600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779853500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779854400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779855300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779856200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779857100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779858000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779858900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779859800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779860700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779861600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779862500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779863400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779864300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779865200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779866100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779867000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779867900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779868800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779869700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779870600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779871500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779872400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779873300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779874200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779875100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779876000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779876900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779877800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779878700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779879600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779880500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779881400,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779882300,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779883200,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779884100,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779885000,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779885900,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779886800,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779887700,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779888600,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779889500,
+              "wh_exported": "[REDACTED]"
+            },
+            {
+              "end_at": 1779890400,
+              "wh_exported": "[REDACTED]"
+            }
+          ]
+        ],
+        "meta": {
+          "status": "normal",
+          "last_report_at": 1779890765,
+          "last_energy_at": 1779890734,
+          "operational_at": 1665093600
         }
       }
     }

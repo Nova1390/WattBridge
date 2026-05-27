@@ -121,10 +121,13 @@ Current findings:
 - Cloud discovery script validates both token and API key before sending read-only requests.
 - OAuth helper script can exchange an authorization code and update ignored `.env.local` without printing returned tokens.
 - Initial read-only discovery succeeded and saved sanitized fixture `fixtures/discovery/enphase-cloud.json`.
-- Successful checks: `/systems`, `/summary`, `/devices`, and `/latest_telemetry`.
+- Successful checks: `/systems`, `/summary`, `/devices`, `/latest_telemetry`, production meter telemetry, consumption meter telemetry, energy import telemetry, and energy export telemetry.
 - Target account exposes one system, 12 microinverters, 2 meters, 1 gateway, and 1 Q Relay.
-- Summary/current telemetry is available; explicit production/consumption/import/export historical telemetry checks are still pending.
-- Next real-data step: extend the discovery script to call production meter, consumption meter, energy import, and energy export telemetry endpoints over a small recent window.
+- Summary/current telemetry is available.
+- Recent 24-hour telemetry returned 96 production intervals and 96 consumption intervals, indicating 15-minute history.
+- Import/export telemetry is available but has a different interval array shape and must be normalized separately.
+- The committed fixture redacts household energy values, identifiers, serial numbers, tokens, keys, and authorization values.
+- Next real-data step: update ADR-0003 storage assumptions and prepare Enphase fixture-based adapter normalization tests.
 
 ### Block 4: SmartThings Read-Only Discovery
 
