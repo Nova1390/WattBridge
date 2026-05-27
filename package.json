@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "check:supabase-readiness": "tsx scripts/supabase-readiness.ts",
-    "discover:enphase": "tsx scripts/enphase-cloud-discovery.ts",
+    "enphase:token": "node --env-file-if-exists=.env.local --import tsx scripts/enphase-oauth-token.ts",
+    "discover:enphase": "node --env-file-if-exists=.env.local --import tsx scripts/enphase-cloud-discovery.ts",
     "discover:smartthings": "tsx scripts/smartthings-discovery.ts"
   },
   "dependencies": {

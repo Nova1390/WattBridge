@@ -79,8 +79,21 @@ Authentication requirements:
 Current discovery status:
 
 - Cloud script is prepared for read-only calls but has not been run against a real account in this repo session.
-- Local environment currently lacks `ENPHASE_ACCESS_TOKEN`, `ENPHASE_API_KEY`, and `ENPHASE_SYSTEM_ID`.
+- Enphase developer application exists for WattBridge and is Live on the Watt plan.
+- Current application access controls include System Details, Site Level Production Monitoring, Site Level Consumption Monitoring, and EV Charger Monitoring.
+- Local environment still needs the application credentials and an OAuth authorization code in `.env.local` before token exchange can run.
 - First real cloud run should start with `/systems`, then use the returned or configured `system_id` for summary, devices, latest telemetry, and import/export capability checks.
+
+Local OAuth workflow:
+
+1. Put Enphase credentials in ignored `.env.local`, never in Git, Brain, Vercel public env, or frontend code.
+2. Open the Enphase Authorization URL and approve access as the system owner.
+3. Copy the temporary authorization code into `ENPHASE_AUTH_CODE` locally.
+4. Run `npm run enphase:token` once to validate the code.
+5. Run `ENPHASE_WRITE_ENV=true npm run enphase:token` only when ready to update `.env.local` with returned access and refresh tokens.
+6. Run `npm run discover:enphase` for read-only fixture capture.
+
+Security note: because the client secret was shared in chat during setup, rotate/regenerate it in the Enphase developer portal after discovery if the portal supports rotation.
 
 Official references checked:
 

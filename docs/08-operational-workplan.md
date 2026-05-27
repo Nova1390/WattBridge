@@ -116,9 +116,11 @@ Exit criteria:
 Current findings:
 
 - Official Enphase API v4 docs confirm that Monitoring APIs use OAuth 2.0 and require both a bearer access token and application API key on API requests.
-- Local discovery cannot run yet because `ENPHASE_ACCESS_TOKEN`, `ENPHASE_API_KEY`, and `ENPHASE_SYSTEM_ID` are not present in the local environment.
-- Cloud discovery script now validates both token and API key before sending read-only requests.
-- Next real-data step: obtain local-only Enphase developer credentials, run `/systems`, select the target `system_id`, then capture sanitized summary/devices/latest telemetry fixtures.
+- Enphase developer application is Live on the Watt plan with System Details, Site Level Production Monitoring, Site Level Consumption Monitoring, and EV Charger Monitoring access.
+- Local discovery cannot run yet because OAuth authorization-code exchange has not been completed and `ENPHASE_SYSTEM_ID` has not been selected from `/systems`.
+- Cloud discovery script validates both token and API key before sending read-only requests.
+- OAuth helper script can exchange an authorization code and update ignored `.env.local` without printing returned tokens.
+- Next real-data step: approve the Enphase Authorization URL, exchange the temporary code, run `/systems`, select the target `system_id`, then capture sanitized summary/devices/latest telemetry fixtures.
 
 ### Block 4: SmartThings Read-Only Discovery
 
